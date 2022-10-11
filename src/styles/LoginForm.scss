@@ -1,5 +1,26 @@
 @import '../scss/variables.scss';
 
 .login-form {
-    background: $primary-alt;
+    background: $primary-color;
+    position: relative;
+    width: 1440px;
+    height: 900px;
+}
+
+.logo {
+    position: absolute;
+    width: 24.75px;
+    height: 25px;
+    left: 97px;
+    top: 107.67px;
+    // background: $logo-linear-gradient;
+}
+
+// signup image section
+.signup-image {
+    position: absolute;
+    width: 600px;
+    height: 337.57px;
+    left: 67px;
+    top: 281px;
 }

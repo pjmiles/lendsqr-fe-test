@@ -14,9 +14,9 @@ const LoginForm = () => {
             <div className="split">
                 <div className="login-left">
                     <div className="left-logo">
-                        <img src={logo} alt='lendsqr logo' />
+                        <img src={logo} alt='lendsqr logo' className="logo" />
                     </div>
-                    <div>
+                    <div className="signup-image">
                         <img src={signInPic} alt="inner form picture" />
                     </div>
                 </div>

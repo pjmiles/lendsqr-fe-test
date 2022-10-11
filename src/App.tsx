@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import './App.scss'
 import LoginForm from "./components/LoginForm";
 
 function App() {
