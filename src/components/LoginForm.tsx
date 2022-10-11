@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import '../styles/LoginForm.scss'
 import logo from '../assests/Union.png'
 import signInPic from '../assests/pablo-sign-in 1.png'
 
@@ -9,7 +10,7 @@ interface LoginProps {
 
 const LoginForm = () => {
     return (
-        <div>
+        <div className="login-form container">
             <div className="split">
                 <div className="login-left">
                     <div className="left-logo">
