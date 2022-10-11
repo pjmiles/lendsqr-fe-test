@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import logo from '../assests/Union.png'
+import signInPic from '../assests/pablo-sign-in 1.png'
 
 interface LoginProps {
     username: string
@@ -11,10 +13,10 @@ const LoginForm = () => {
             <div className="split">
                 <div className="login-left">
                     <div className="left-logo">
-                        <img alt='lendsqr logo' />
+                        <img src={logo} alt='lendsqr logo' />
                     </div>
                     <div>
-                        <img alt="inner form picture" />
+                        <img src={signInPic} alt="inner form picture" />
                     </div>
                 </div>
 
