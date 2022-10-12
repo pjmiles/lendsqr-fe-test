@@ -1,0 +1,88 @@
+@import '../scss/variables.scss';
+
+.login-form {
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    top: 0;
+    width: 1440px;
+    height: 900px;
+}
+
+.split {
+    background-color: $primary-color;
+}
+
+// left section
+.left-logo {
+    display: flex;
+    gap: 10px;
+}
+
+.logo {
+    width: 24.75px;
+    height: 25px;
+}
+
+.signup-image-container {
+    margin-top: 280px;
+}
+
+.login-left {
+    padding: 30px;
+}
+
+// right section
+.login-right {
+    width: 704px;
+    height: 900px;
+    display: flex;
+    box-shadow: $box-shadow;
+    margin: auto;
+}
+
+.right-heading {
+    line-height: 55px;
+    margin-bottom: 50px;
+    h1 {
+        color: $secondary-color;
+
+    }
+    p {
+        color: $secondary-alt;
+    }
+}
+
+.link-container {
+    margin: 20px 0;
+}
+
+.form-group {
+    margin: auto;
+}
+
+.form-control {
+    input{
+        width: 447px;
+        height: 50px;
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5px;
+    } 
+    a {
+        text-decoration: none;
+        color: $btn-color;
+    }
+}
+
+.button-container {
+    button {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        color: $primary-color;
+        background: $btn-color;
+        letter-spacing: 0.1em;
+    }
+}
