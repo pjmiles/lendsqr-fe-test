@@ -24,4 +24,10 @@
 * `npm install axios` for fetching API
 
 ## Live Solution
-* Click [here]() to view live solution of this project
+* Click [here](https://ponmile-adebisi-lendsqr-fe-test.vercel.app/) to view live solution of this project. 
+`NB:` Please note this is not final solution as it will keep changing as other branches are being worked on to make improvements and new updates can only be live when its been merged to the production branch. 
+
+## Status & Todo-List
+* Work on the mobile responsive part of the design
+* Build Dashboard, Users page, User details page.
+
