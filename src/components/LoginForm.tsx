@@ -1,15 +1,85 @@
 import { Link } from 'react-router-dom'
+import { useReducer, FormEvent } from 'react'
+import axios from 'axios'
 import '../styles/LoginForm.scss'
 import logo from '../assests/Union.png'
 import signInPic from '../assests/pablo-sign-in 1.png'
 import lendsqr from '../assests/lendsqr.png'
 
+// state values
 interface LoginProps {
     username: string
-    passwor: string
+    password: string
+    error: string
+    isLoggedIn: boolean
+    isLoading: boolean 
 }
 
+const initialState: LoginProps = {
+    username: "",
+    password: "",
+    error: "",
+    isLoggedIn: false,
+    isLoading: false
+}
+
+// login action type
+type LoginAction = 
+    | { type: "login" | "error" | "success" }
+    | { type: "field", fieldName: string, payload: string }
+
+const loginReducer = (state: LoginProps, action: LoginAction): LoginProps => {
+    // switch case for actions
+    switch (action.type) {
+        case "field": {
+            return {
+                ...state, [action.fieldName]: action.payload
+            }
+        }
+        case "login": {
+            return {
+                ...state, error: "", isLoading: true
+            }
+        }
+        case "success": {
+            return {
+                ...state, error: "", isLoading: false, isLoggedIn: true
+            }
+        }
+        case "error": {
+            return {
+                ...state, 
+                isLoading: false, 
+                isLoggedIn: false, 
+                username: "", 
+                password: "", 
+                error: "Invalid username or password!"
+            }
+        }
+
+        default: 
+            return state
+    }
+}
+
+
 const LoginForm = () => {
+    const [state, setState] = useReducer(loginReducer, initialState)
+    const { username, password, isLoading, isLoggedIn, error } = state 
+
+    // to handle submit
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setState({ type: "login" })
+        try {
+            const { data } = await axios.post("/login", { username, password }) // this axios is for api call to the endpoint
+            localStorage.setItem("loginDetails", JSON.stringify(data))
+            setState({ type: "success" }) 
+        } catch (error) {
+            setState({ type: "error" })
+        }
+    }
+
     return (
         <div className="login-form container">
             <div className="split">
