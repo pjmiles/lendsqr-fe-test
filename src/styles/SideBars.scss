@@ -1,0 +1,30 @@
+@import '../scss/variables.scss';
+
+.sidebar {
+    flex: 0.3;
+    border-right: 2px solid blanchedalmond;
+    min-width: 250px;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    h1, span{
+        font-size: 14px;
+        font-weight: $small-font-weight;
+        margin-left: 10px;
+        color: $secondary-color;
+    }
+}
+
+.sidebar-option:hover {
+    background-color: $btn-color;
+}
+
+.sidebar-option--active {
+    color: $secondary-alt;
+}
