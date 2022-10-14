@@ -2,11 +2,24 @@
 
 .sidebar {
     flex: 0.3;
-    border-right: 2px solid blanchedalmond;
+    box-shadow: 10px 0 5px -2px #888;
     min-width: 250px;
-    margin-top: 50px;
-    padding-left: 20px;
+    margin-top: 60px;
     padding-right: 20px;
+    select {
+        margin-bottom: 20px;
+    }
+    p {
+        text-transform: uppercase;
+        font-size: $text-font-size-s;
+        margin-left: 3px;
+        padding: 5px;
+        color: $secondary-alt;
+    }
+}
+
+.side-section {
+    margin-bottom: 30px;
 }
 
 .sidebar-option {
@@ -16,8 +29,9 @@
     h1, span{
         font-size: 14px;
         font-weight: $small-font-weight;
-        margin-left: 10px;
+        margin-left: 2px;
         color: $secondary-color;
+        padding: 5px;
     }
 }
 
@@ -27,4 +41,9 @@
 
 .sidebar-option--active {
     color: $secondary-alt;
+}
+
+.logout {
+    border-top: 1px solid #eee;
+    padding: 15px;
 }
