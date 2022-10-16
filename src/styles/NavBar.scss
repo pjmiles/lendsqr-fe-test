@@ -1,0 +1,16 @@
+@import '../scss/variables.scss';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    .logo{
+        display: flex;
+        gap: 5px;
+    }
+    .group{
+        display: flex;
+        gap: 20px;
+    }
+
+}

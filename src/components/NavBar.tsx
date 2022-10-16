@@ -2,7 +2,7 @@ import logo from '../assests/Union.png'
 import lendsqr from '../assests/lendsqr.png'
 import { NavLink } from 'react-router-dom'
 import { FaHome } from 'react-icons/fa'
-
+import '../styles/NavBar.scss'
 
 const NavBar = () => {
   return (
@@ -12,7 +12,7 @@ const NavBar = () => {
           <img alt='lendsqr' src={lendsqr} />
         </div>
         <form className='search'>
-          <input type="search" placeholder='Search for anything' />
+          <input type="search" placeholder='Search for anything' className='search-input'/>
           <button>
             <i className='search-icon'>
               {<FaHome />}
