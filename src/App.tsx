@@ -3,6 +3,7 @@ import './App.scss'
 import LoginForm from "./components/LoginForm";
 import { SideBar } from './components/SideBarOptions';
 import NavBar from './components/NavBar';
+import { UserInfo } from './components/UserList';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <>
         <NavBar />
         <SideBar />
+        <UserInfo />
         </>
         } 
         />
