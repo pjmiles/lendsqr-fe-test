@@ -10,7 +10,7 @@ type IconProps = {
 
 const SideBarOptions: React.FC<IconProps> = ({ icon, text, active }) => {
   return(
-    <div className={`sidebar-option ${active && "sidebar-option--active"}`}>
+    <div key={text} className={`sidebar-option ${active && "sidebar-option--active"}`}>
       <span>{icon}</span>
       <h1>{text}</h1>
     </div>

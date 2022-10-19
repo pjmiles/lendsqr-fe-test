@@ -25,7 +25,7 @@ const NavBar = () => {
           <div className='avatar'>
             <img alt='avatar' src='' />
             <select placeholder='Adedeji'>
-              <option>Username</option>
+              <option>Adedeji</option>
             </select>
           </div>
         </div>
