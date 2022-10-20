@@ -1,4 +1,5 @@
-import { FaHome } from 'react-icons/fa'
+import { FaHome, FaUsersCog } from 'react-icons/fa'
+import { HiUsers } from 'react-icons/hi'
 import { useState } from 'react'
 
 interface userTypeProps {
