@@ -1,7 +1,9 @@
 import logo from '../assests/Union.png'
 import lendsqr from '../assests/lendsqr.png'
 import { NavLink } from 'react-router-dom'
-import { FaHome } from 'react-icons/fa'
+import { AiOutlineSearch } from 'react-icons/ai'
+import { IoIosNotificationsOutline } from 'react-icons/io'
+import profileImage from '../assests/profile-image.png'
 import '../styles/NavBar.scss'
 
 const NavBar = () => {
@@ -15,15 +17,15 @@ const NavBar = () => {
           <input type="search" placeholder='Search for anything' className='search-input'/>
           <button>
             <i className='search-icon'>
-              {<FaHome />}
+              {<AiOutlineSearch />}
             </i>
           </button>
         </form>
         <div className='group'>
           <NavLink to="/docs">Docs</NavLink>
-          <div>notification</div>
+          <div>{<IoIosNotificationsOutline />}</div>
           <div className='avatar'>
-            <img alt='avatar' src='' />
+            <img alt='profile image' src={profileImage} />
             <select placeholder='Adedeji'>
               <option>Adedeji</option>
             </select>
