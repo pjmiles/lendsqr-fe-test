@@ -21,15 +21,23 @@ const NavBar = () => {
             </i>
           </button>
         </form>
-        <div className='group'>
-          <NavLink to="/docs">Docs</NavLink>
-          <div>{<IoIosNotificationsOutline />}</div>
-          <div className='avatar'>
-            <img alt='profile image' src={profileImage} />
-            <select placeholder='Adedeji'>
-              <option>Adedeji</option>
-            </select>
-          </div>
+        <div className='nav-links'>
+          <ul>
+            <li>
+              <NavLink className="docs" to="/docs">Docs</NavLink>
+            </li>
+            <li>
+              <p className='bell'>{<IoIosNotificationsOutline />}</p>
+            </li>
+            <li>
+              <img
+                className='profile-image' 
+                alt='profile image' 
+                src={profileImage} 
+                />
+                <p className='username'>Ayodeji</p>
+            </li>
+          </ul>
         </div>
     </nav>
   )
