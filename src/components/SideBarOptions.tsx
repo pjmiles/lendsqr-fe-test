@@ -1,4 +1,5 @@
 import { FaHome } from 'react-icons/fa'
+import briefcase  from '../assests/icons/briefcase.svg'
 import '../styles/SideBars.scss'
 
 
@@ -21,7 +22,7 @@ export const SideBar: React.FC<any> = () => {
   return (
     <div className="sidebar">
       <select>
-        <option><SideBarOptions text='Switch Organization' icon={<FaHome />} /></option>
+        <option><SideBarOptions text='Switch Organization' /></option>
       </select>
      <div className="side-section"><SideBarOptions text='Dashboard' icon={<FaHome />} /></div>
      
