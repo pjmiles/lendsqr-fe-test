@@ -79,7 +79,7 @@ const LoginForm = () => {
             const { data } = await axios.post("/login", { email, password }) // this axios is for api call to the endpoint
             localStorage.setItem("loginDetails", JSON.stringify(data))
             setState({ type: "success" })
-            navigate("/dashboard", {replace: true}) 
+            navigate("/users", {replace: true}) 
         } catch (error) {
             setState({ type: "error" })
         }
@@ -143,9 +143,10 @@ const LoginForm = () => {
                             <Link to="/forget-password" className="link">Forgot Password?</Link>
                         </div>
                         <div className="button-container">
-                            <button className="submit-btn" disabled={isLoading}>
+                            {/* for tempory purpose to visit users page */}
+                            <Link to="users"><button className="submit-btn" disabled={isLoading}>
                                 {isLoading ? "Logging in..." : "LOG IN"}
-                            </button>
+                            </button></Link> 
                         </div>
                     </div>
                 </form>
